@@ -81,6 +81,5 @@ mode        : selfcontained      # {standalone, draft}
 
 
 ---
-## Branches in Git
 
 ![gitBranch](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\gitBranch.png)
