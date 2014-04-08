@@ -1,19 +1,16 @@
 ---
-title       : Reproducible Research and Fisheries management??
-subtitle    : 
+title       : Reproducible Research in Fisheries
+subtitle    : applications of Git, Markdown, knitr and Pandoc for scientific workflow
 author      : K.M. Purcell
-job         : 
-framework   : deckjs             # {io2012, html5slides, shower, dzslides, deckjs...}
-highlighter : highlight.js       # {highlight.js, prettify, highlight}
+job         : Postdoctoral Associate
+framework   : io2012             # {io2012, html5slides, shower, dzslides, deckjs...}
 hitheme     : solarized_light    # {tomorrow}
-widgets     : []                 # {mathjax, quiz, bootstrap}
+widgets     : [mathjax, quiz, bootstrap]    # {mathjax, quiz, bootstrap}
 mode        : selfcontained      # {standalone, draft}
-
----
-
-## Reproducible Research and Fisheries management
-
-### K.M. Purcell
+license     : by-nc-sa
+github      : 
+ user       :kpurcell
+ repo       :Git4NOAA
 
 ---
 
@@ -78,8 +75,16 @@ mode        : selfcontained      # {standalone, draft}
 
 * with "track changes" ```accepted==gone```
 * VCS maintains a full record with provenance (date, author, changes)
+ + SSH hashes
+ 
+
+
+---
+## Branches in Git
+
+![gitBranch](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\gitBranch.png)
 
 
 ---
 
-![gitBranch](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\gitBranch.png)
+source code management

@@ -1,22 +1,16 @@
 ---
-title       : Reproducible Research and Fisheries management??
+title       : Reproducible Research in Fisheries
 subtitle    : applications of Git, Markdown, knitr and Pandoc for scientific workflow
 author      : K.M. Purcell
 job         : Postdoctoral Associate
-framework   : deckjs             # {io2012, html5slides, shower, dzslides, deckjs...}
-highlighter : highlight.js       # {highlight.js, prettify, highlight}
+framework   : io2012             # {io2012, html5slides, shower, dzslides, deckjs...}
 hitheme     : solarized_light    # {tomorrow}
-widgets     : []                 # {mathjax, quiz, bootstrap}
+widgets     : [mathjax, quiz, bootstrap]    # {mathjax, quiz, bootstrap}
 mode        : selfcontained      # {standalone, draft}
 license     : by-nc-sa
 github      : 
  user       :kpurcell
  repo       :Git4NOAA
----
-
-## Reproducible Research and Fisheries management
-
-### K.M. Purcell
 
 ---
 
