@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
 <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
 <link rel=stylesheet href="./assets/css/ribbons.css"></link>
@@ -52,12 +52,39 @@
 
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- Limit image width and height -->
+
+<style type='text/css'>
+img {
+    max-height: 560px;
+    max-width: 964px;
+}
+</style>
+
+<!-- Center image on slide -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
     <h2>Slide 1</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Reproducible Research</li>
+<li>Reproducible Research
+-The reason what we do in fisheries is especially fitted for these approaches is because our work is inherently open in that it is for the public good and open to public criticism
+-also indefinately repetitive meaning that reproducibility is not only a necessity but also expedient.</li>
 <li>Open Science</li>
 <li>Scientific Workflow</li>
 </ul>
@@ -66,13 +93,68 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-2" style="background:;">
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Dynamic Documents</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>&quot;Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do.&quot;</p>
+
+<p>-- Donal E. Knuth, Literate Programming, 1984</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Tools for Reproducible Research</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Version control (Git)</li>
+<li>Markdown</li>
+<li>knitr</li>
+<li>pandoc</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Version Control</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Markdown</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>John Mc??</li>
+<li>Simplicity over \(\LaTeX\)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
   <hgroup>
     <h2>Slide 2</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Literature Programming (Donald Knuth)</li>
+<li>Literate Programming (Donald Knuth)</li>
 <li>Clear provenance</li>
 <li>Repeatibility</li>
 <li>Collaboration</li>
@@ -84,7 +166,33 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Testing the command line</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>testing </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Knitr vs Sweave</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>the maturation of literate</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Version control System (VCS)</h2>
   </hgroup>
@@ -101,7 +209,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>Git &amp; GitHub</h2>
   </hgroup>
@@ -122,7 +230,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <article data-timings="">
     <p><img src="http://i1.wp.com/ouseful.files.wordpress.com/2012/07/rchitecture1.png" alt="workFlow"></p>
 
@@ -130,7 +238,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>Sources for more information</h2>
   </hgroup>
@@ -143,7 +251,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>Pandoc conversion utility</h2>
   </hgroup>
@@ -154,7 +262,27 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Pandoc</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Swiss army knife for docs</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  
+</div>
+<div style='float:right;width:48%;'>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>File Tracking (Old way)</h2>
+  </hgroup>
   <article data-timings="">
     <p><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" alt="vcs"></p>
 
@@ -162,7 +290,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <article data-timings="">
     <ul>
 <li>with &quot;track changes&quot; <code>accepted==gone</code></li>
@@ -177,7 +305,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Branches in Git</h2>
   </hgroup>
@@ -188,7 +316,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <article data-timings="">
     <p>source code management</p>
 
@@ -202,74 +330,122 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Slide 1'>
+        data-slide=1 title=''>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Slide 1'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Version control System (VCS)'>
+        data-slide=3 title='Dynamic Documents'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Git &amp; GitHub'>
+        data-slide=4 title='Tools for Reproducible Research'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Slide 2'>
+        data-slide=5 title='Version Control'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title=''>
+        data-slide=6 title='Markdown'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Sources for more information'>
+        data-slide=7 title='Slide 2'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Pandoc conversion utility'>
+        data-slide=8 title='Testing the command line'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title=''>
+        data-slide=9 title='Knitr vs Sweave'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title=''>
+        data-slide=10 title='Version control System (VCS)'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Branches in Git'>
+        data-slide=11 title='Git &amp; GitHub'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title=''>
+        data-slide=12 title='Slide 2'>
          12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title=''>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Sources for more information'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Pandoc conversion utility'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Pandoc'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='File Tracking (Old way)'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title=''>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Branches in Git'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title=''>
+         20
       </a>
     </li>
   </ul>
