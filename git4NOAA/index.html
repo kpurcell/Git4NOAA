@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/.css" />
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
 <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
 <link rel=stylesheet href="./assets/css/ribbons.css"></link>
@@ -33,9 +33,12 @@
     
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/noaa.jpg">
+  </aside>
   <hgroup class="auto-fadein">
     <h1>Reproducible Research in Fisheries</h1>
-    <h2>applications of Git, Markdown, knitr and Pandoc for scientific workflow</h2>
+    <h2>Git, Markdown, knitr and Pandoc for scientific workflow</h2>
     <p>K.M. Purcell<br/>Postdoctoral Associate</p>
   </hgroup>
     <a href="https://github.com///zipball/gh-pages" class="example">
@@ -51,7 +54,7 @@
     
 
     <!-- SLIDES -->
-    <slide class="" id="slide-1" style="background:;">
+    <slide class="segue nobackground dark" id="slide-1" style="background:;">
   <article data-timings="">
     <!-- Limit image width and height -->
 
@@ -72,43 +75,27 @@ $(function() {
 });
 </script>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<h2>Objectives</h2>
 
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>Slide 1</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>Reproducible Research
--The reason what we do in fisheries is especially fitted for these approaches is because our work is inherently open in that it is for the public good and open to public criticism
--also indefinately repetitive meaning that reproducibility is not only a necessity but also expedient.</li>
-<li>Open Science</li>
-<li>Scientific Workflow</li>
+<ul>
+<li>Introduce Reproducible Research</li>
+<li></li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>Dynamic Documents</h2>
-  </hgroup>
+<slide class="" id="slide-2" style="background:;">
   <article data-timings="">
-    <blockquote>
-<p>&quot;Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do.&quot;</p>
-
-<p>-- Donal E. Knuth, Literate Programming, 1984</p>
-</blockquote>
+    <p>-The reason what we do in fisheries is especially fitted for these approaches is because our work is inherently open in that it is for the public good and open to public criticism
+-also indefinately repetitive meaning that reproducibility is not only a necessity but also expedient.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-3" style="background:;">
   <hgroup>
     <h2>Tools for Reproducible Research</h2>
   </hgroup>
@@ -124,7 +111,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>Version Control</h2>
   </hgroup>
@@ -134,7 +121,102 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Version control System (VCS)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Version control systems (VCS)</li>
+<li>Write using R Markdown</li>
+<li>Use an empty line followed by three dashes to separate slides!</li>
+</ol>
+
+<p><img src="http://thril.uws.edu.au/wp-content/uploads/2013/10/git-icon.png" alt="gitIcon"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
 <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Git &amp; GitHub</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Slide 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://www.phdcomics.com/comics/archive/phd031214s.gif" alt="codeReuse"></p>
+
+<h2>Dynamic Documents</h2>
+
+<blockquote>
+<p>&quot;Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do.&quot;</p>
+
+<p>-- Donal E. Knuth, Literate Programming, 1984</p>
+</blockquote>
+
+<h2>Why?</h2>
+
+<ol>
+<li>Increased repeatiblity</li>
+<li>Reduced creation time (image transfer)</li>
+<li>Reduced transposition errors (no errors in tables)</li>
+<li>Reduced re-creation time (no repition when data changes)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Sweave Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>\section{Exploratory Data Analysis}
+
+\begin{figure}
+\begin{center}
+
+&lt;&lt;fig=TRUE,echo=FALSE&gt;&gt;=
+sunflowerplot(br.gss.dat$lon, br.gss.dat$lat, main=&quot;Sampling Intensity&quot;, xlab=&quot;Lon&quot;,
+              ylab=&quot;Lat&quot;)
+map(&quot;state&quot;,fill=T,col=&quot;gray&quot;,add=T)
+@
+
+\caption{This is a Sunflower plot showing spatial distribution of sampling intensity}
+\label{fig:sunflower}
+\end{center}
+\end{figure}
+
+The spatial distribution for sampling intensity for entire Gulf Shrimp statistics dataset can be seen in the sunflower plot \ref{fig:sunflower}.  Each line is a samples and therefore more developed
+petals represent positions with higher sampling.  The sampling intenstiy uniform and plenty dense. 
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Rmarkdown Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://www.rstudio.com/images/docs/markdownChunk.png" alt="dynDocEx"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Markdown</h2>
   </hgroup>
@@ -148,7 +230,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>Slide 2</h2>
   </hgroup>
@@ -166,7 +248,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Testing the command line</h2>
   </hgroup>
@@ -179,7 +261,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <hgroup>
     <h2>Knitr vs Sweave</h2>
   </hgroup>
@@ -192,45 +274,14 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
-  <hgroup>
-    <h2>Version control System (VCS)</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>Version control systems (VCS)</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
-
-<p><img src="http://thril.uws.edu.au/wp-content/uploads/2013/10/git-icon.png" alt="gitIcon"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-11" style="background:;">
-  <hgroup>
-    <h2>Git &amp; GitHub</h2>
-  </hgroup>
+<slide class="" id="slide-14" style="background:;">
   <article data-timings="">
     
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 2</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="http://www.phdcomics.com/comics/archive/phd031214s.gif" alt="codeReuse"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <article data-timings="">
     <p><img src="http://i1.wp.com/ouseful.files.wordpress.com/2012/07/rchitecture1.png" alt="workFlow"></p>
 
@@ -238,7 +289,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Sources for more information</h2>
   </hgroup>
@@ -251,7 +302,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="" id="slide-17" style="background:;">
   <hgroup>
     <h2>Pandoc conversion utility</h2>
   </hgroup>
@@ -262,24 +313,41 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <hgroup>
     <h2>Pandoc</h2>
   </hgroup>
   <article data-timings="">
-    <p>Swiss army knife for docs</p>
-
+    
 <div style='float:left;width:48%;' class='centered'>
-  
+  <p><strong>INPUT</strong>  </p>
+
+<ul>
+<li>markdown<br></li>
+<li>HTML<br></li>
+<li>DocBook<br></li>
+<li>LaTex<br></li>
+<li>MediaWiki<br></li>
+</ul>
+
 </div>
 <div style='float:right;width:48%;'>
-  
+  <p><strong>OUTPUT</strong>  </p>
+
+<ul>
+<li>Word docx<br></li>
+<li>LaTex<br></li>
+<li>LaTex Beamer<br></li>
+<li>PDF<br></li>
+<li>HTML5<br></li>
+</ul>
+
 </div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>File Tracking (Old way)</h2>
   </hgroup>
@@ -290,7 +358,7 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <article data-timings="">
     <ul>
 <li>with &quot;track changes&quot; <code>accepted==gone</code></li>
@@ -305,18 +373,18 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Branches in Git</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5CgitBranch.png" alt="gitBranch"></p>
+    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CgitBranch.png" alt="gitBranch"></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <article data-timings="">
     <p>source code management</p>
 
@@ -336,31 +404,31 @@ $(function() {
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 1'>
+        data-slide=2 title=''>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Dynamic Documents'>
+        data-slide=3 title='Tools for Reproducible Research'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Tools for Reproducible Research'>
+        data-slide=4 title='Version Control'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Version Control'>
+        data-slide=5 title='Version control System (VCS)'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Markdown'>
+        data-slide=6 title='Git &amp; GitHub'>
          6
       </a>
     </li>
@@ -372,73 +440,73 @@ $(function() {
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Testing the command line'>
+        data-slide=8 title='Sweave Example'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Knitr vs Sweave'>
+        data-slide=9 title='Rmarkdown Example'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Version control System (VCS)'>
+        data-slide=10 title='Markdown'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Git &amp; GitHub'>
+        data-slide=11 title='Slide 2'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Slide 2'>
+        data-slide=12 title='Testing the command line'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title=''>
+        data-slide=13 title='Knitr vs Sweave'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Sources for more information'>
+        data-slide=14 title=''>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Pandoc conversion utility'>
+        data-slide=15 title=''>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Pandoc'>
+        data-slide=16 title='Sources for more information'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='File Tracking (Old way)'>
+        data-slide=17 title='Pandoc conversion utility'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title=''>
+        data-slide=18 title='Pandoc'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Branches in Git'>
+        data-slide=19 title='File Tracking (Old way)'>
          19
       </a>
     </li>
@@ -446,6 +514,18 @@ $(function() {
       <a href="#" target="_self" rel='tooltip' 
         data-slide=20 title=''>
          20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Branches in Git'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title=''>
+         22
       </a>
     </li>
   </ul>
