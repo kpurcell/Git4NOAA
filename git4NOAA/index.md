@@ -13,7 +13,7 @@ github      :
  user       :kpurcell
  repo       :Git4NOAA
 
---- .segue .nobackground .dark
+---
 
 <!-- Limit image width and height -->
 <style type='text/css'>
@@ -31,68 +31,192 @@ $(function() {
 });
 </script>
 
-## Objectives
+## Reproducible Research 
 
-* Introduce Reproducible Research
-* 
+* **Justifications:**
 
----
+    * creates an *open* standard
+    * prevents *re-creation* -- facilitates *advancement* 
+    * fosters *collaboration*
+    * Required by a growning number of publications
+    
+* **Fisheries is especially fitted for RR approaches because our work is**:
 
--The reason what we do in fisheries is especially fitted for these approaches is because our work is inherently open in that it is for the public good and open to public criticism
--also indefinately repetitive meaning that reproducibility is not only a necessity but also expedient.
-
----
-
-## Tools for Reproducible Research
-
-* Version control (Git)
-* Markdown
-* knitr
-* pandoc
-
----
-
-## Version Control
-
-
----
-
-## Version control System (VCS)
-
-1. Version control systems (VCS)
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
-
-![gitIcon](http://thril.uws.edu.au/wp-content/uploads/2013/10/git-icon.png)
-
----
-## Git & GitHub
-
-
-
+    * inherently open in that it is for the public good 
+    * open to criticism & evaluation
+    
+* **Stock assessment is also**:
+    * Repetitive -- meaning that reproducibility is not only a necessity but also expedient.
+    * Collaborative -- meaning a number of partners contribute to any stock assessment
 
 --- 
 
-## Slide 2
+## The Quant's Quandry
+
+![geekChoice](http://www.globalnerdy.com/wordpress/wp-content/uploads/2012/04/geeks-and-repetitive-tasks.jpg)
+
+
+--- &twocol
+## Tools for Reproducible Research
+
+*** =left
+
+1. Version control
+  * Git
+2. Dynamic documents
+  * Markdown
+  * knitr
+  * pandoc
+
+*** =right
+![RR](http://www.siam.org/images/news/2078.jpg)
+
+--- .segue .nobackground .dark
+
+## Version Control Systems
+
+--- &twocol
+
+## Version control System (VCS)
+
+*** =left
+## 
+
+1. Origins in software development
+2. Advanced file versioning, and infinite undo
+3. Does not interfere with current methods (backups etc.)
+4. Lots of options (Subversion, Mercurial, Git)
+
+*** =right
+## 
+
+![vcs](http://www.phdcomics.com/comics/archive/phd101212s.gif)
+
+--- &twocol
+
+## File Tracking (Old way)
+
+*** =left
+
+* with "track changes" ```accepted==gone```
+* Data changes (Who? Why? When?)
+* VCS maintains a full provenance:
+  * date & time of change 
+  * authorof changes 
+  * details on exact changes
+  * + SSH hashes 
+ 
+*** =right
+
+![vcs2](http://www.phdcomics.com/comics/archive/phd101212s.gif)
+
+--- &twocol .segue .nobackground .dark
+
+*** =left
+
+![files](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\numFiles.jpg)
+
+*** =right
+
+![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitFolder.png)
+
+--- &twocol
+
+## Git managed folder
+
+*** =left
+* **Contains**
+  1. All project directories
+  2. All files
+  
+* **Including**
+  * 92 versions of manuscript
+
+*** =right
+
+![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitFolder.png)
+
+---
+
+## git workflow
+
+![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\git-workflow.png)
+
+--- &twocol
+
+*** =left
+
+## GitHub
+
+* **Git** can also operate collaboratively
+* Collaboration require an **shared** server
+* The most popular platform is **GitHub**
+
+
+*** =right
+
+![gitHubIcon](http://i1-news.softpedia-static.com/images/news2/Twitter-s-Original-Logo-Designer-Only-Made-3-from-It-2.jpg)
+
+---
+
+## GitHub Interface
+
+![kpGitHub](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\kpurcellGitHub.png)
+
+--
+
+## Collaboration in Git
+
+### 1. Collaboration is fueled by **Branches**
+### 2. Branches can be for different authors or different methods
+
+![gitBranch](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitBranch.png)
+
+--- .segue .nobackground .dark
+
+## How about a new Assessment
 
 ![codeReuse](http://www.phdcomics.com/comics/archive/phd031214s.gif)
+
+---
+
+## Starting a new assessment, 
+
+### 1. Clone the previous repro 
+### 2. START!
+
+![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\git-workflow.png)
+
+--- .segue .nobackground .dark
+
+## Dynamic Documents
+
+---
 
 ## Dynamic Documents
 
 >"Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do."
 
->-- Donal E. Knuth, Literate Programming, 1984
+>-- Donald E. Knuth, Literate Programming, 1984
+
+## Essential a document with the code and text in one.
 
 ## Why?
 
-1. Increased repeatiblity
+1. Increased repeatability
 2. Reduced creation time (image transfer)
 3. Reduced transposition errors (no errors in tables)
-4. Reduced re-creation time (no repition when data changes)
+4. Reduced re-creation time (no repetition when data changes)
 
 ---
 
-## Sweave Example
+## Sweave
+
+![sweaveImg](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\sweaveDiagram.png)
+
+---
+
+## Sweave 
 ```
 \section{Exploratory Data Analysis}
 
@@ -114,103 +238,126 @@ The spatial distribution for sampling intensity for entire Gulf Shrimp statistic
 petals represent positions with higher sampling.  The sampling intenstiy uniform and plenty dense. 
 ```
 
----
+--- &twocol
 
 ## Rmarkdown Example
 
+*** =left
+
+![RstudioFiles](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\rstudioFiles.png)
+
+*** =right
 ![dynDocEx](http://www.rstudio.com/images/docs/markdownChunk.png)
 
+--- &twocol
+
+*** =left 
+
+## Markdown  
+
+* Created by John Gruber  
+* Simplicity over LaTeX  
+* Basic keyboard commands for formatting
+* Faster, due to limited mouse use
+* Flexible -- Allows use of LaTeX code
+* Easily managed with VCS
+* Standardized format for conversion
+
+*** =right
+
+![sweaveImg](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\mdSyntax.png)
+
+--- &twocol
+
+## Knitr  
+
+*** =left
+
+* `knitR()` is a R package for dynamic report generation  
+* created by Yihui Xie (Iowa State, RStudio)
+* works with other languages (*Awk*, *Lisp*, etc.)
+* highly customizable (show code, hide code, etc)
+![knitrCustom](http://www.rstudio.com/images/docs/markdownChunkOptions.png)
+* Generates PDF (via LaTex), HTML
+
+*** =right
+
+![knitrBook](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\knitrBook.jpg)
+
 ---
 
+## How does it work? 
+
+**It takes this code:**  
+
+![knitrE](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\knitrEx.png)
+
+And creates the previous slide:
+
+--- &twocol
+
+## Knitr  
+
+*** =left
+
+* created by Yihui Xie (Iowa State, RStudio)
+* `knitR()` is a R package for dynamic report generation  
+* works with other languages (*Awk*, *Lisp*, etc.)
+* highly customizable (show code, hide code, etc)
+* Generates **PDF** (via LaTex), **HTML**
+
+*** =right
+
+![knitrBook](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\knitrBook.jpg)
+
+--- .segue .dark
+
+## For the MS Word hold outs!
+![antiMS](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\antiMS.jpg)
+
+--- &twocol
+## Pandoc conversion utility
+*** =left
+
+
+* Swiss Army Knife
+* Converts between  **43** formats
+* Renders Lit. Cited (No need for EndNote)
+* can run from within R
 
 
 
+*** =right
 
-## Markdown
-* John Mc??
-* Simplicity over $\LaTeX$
+![pandocCon](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\pandoc.jpg)
 
----
-
-## Slide 2
-
-* Literate Programming (Donald Knuth)
-* Clear provenance
-* Repeatibility
-* Collaboration
-* Markdown
-* Version Control
-
----
-
-## Testing the command line
-* testing 
-
----
-
-## Knitr vs Sweave 
-* the maturation of literate
-
----
-
-
-
----
-
-![workFlow](http://i1.wp.com/ouseful.files.wordpress.com/2012/07/rchitecture1.png)
+Inputs  | Outputs
+------------- | -------------
+Markdown      | **Word .docx**
+HTML          | LaTex
+DocBook       | LaTex Beamer
+LaTex         | **PDF**
+MediaWiki     | HTML 5
 
 ---
 
 ## Sources for more information
 
-* Lessions for @scarpentry (http://software-carpentry.org/v4/index.html)
-
----
-## Pandoc conversion utility
-
-![pandoc](http://johnmacfarlane.net/pandoc/diagram.png)
-
---- &twocol
-
-## Pandoc 
-
-*** =left  
-
-**INPUT**  
-  * markdown  
-  * HTML  
-  * DocBook  
-  * LaTex  
-  * MediaWiki  
-
-*** =right  
-
- **OUTPUT**  
-  * Word docx  
-  * LaTex  
-  * LaTex Beamer  
-  * PDF  
-  * HTML5  
-
----
-
-## File Tracking (Old way)
-![vcs](http://www.phdcomics.com/comics/archive/phd101212s.gif)
-
----
-
-* with "track changes" ```accepted==gone```
-* VCS maintains a full record with provenance (date, author, changes)
- + SSH hashes
- 
-
-
----
-## Branches in Git
-
-![gitBranch](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitBranch.png)
+1. [Software Carpentry](http://software-carpentry.org/v4/index.html)  
+2. [RStudio](https://support.rstudio.com/hc/en-us/articles/200552086-Using-R-Markdown)
 
 
 ---
 
-source code management
+## This is the method you are looking for!
+
+![obiOcto](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\octobiwan2.jpg)
+
+---
+
+## Or maybe not...
+
+![theory](http://imgs.xkcd.com/comics/automation.png)
+
+---
+

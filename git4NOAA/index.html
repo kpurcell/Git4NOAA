@@ -54,7 +54,7 @@
     
 
     <!-- SLIDES -->
-    <slide class="segue nobackground dark" id="slide-1" style="background:;">
+    <slide class="" id="slide-1" style="background:;">
   <article data-timings="">
     <!-- Limit image width and height -->
 
@@ -75,11 +75,29 @@ $(function() {
 });
 </script>
 
-<h2>Objectives</h2>
+<h2>Reproducible Research</h2>
 
 <ul>
-<li>Introduce Reproducible Research</li>
-<li></li>
+<li><p><strong>Justifications:</strong></p>
+
+<ul>
+<li>creates an <em>open</em> standard</li>
+<li>prevents <em>re-creation</em> -- facilitates <em>advancement</em> </li>
+<li>fosters <em>collaboration</em></li>
+<li>Required by a growning number of publications</li>
+</ul></li>
+<li><p><strong>Fisheries is especially fitted for RR approaches because our work is</strong>:</p>
+
+<ul>
+<li>inherently open in that it is for the public good </li>
+<li>open to criticism &amp; evaluation</li>
+</ul></li>
+<li><p><strong>Stock assessment is also</strong>:</p>
+
+<ul>
+<li>Repetitive -- meaning that reproducibility is not only a necessity but also expedient.</li>
+<li>Collaborative -- meaning a number of partners contribute to any stock assessment</li>
+</ul></li>
 </ul>
 
   </article>
@@ -87,9 +105,11 @@ $(function() {
 </slide>
 
 <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The Quant&#39;s Quandry</h2>
+  </hgroup>
   <article data-timings="">
-    <p>-The reason what we do in fisheries is especially fitted for these approaches is because our work is inherently open in that it is for the public good and open to public criticism
--also indefinately repetitive meaning that reproducibility is not only a necessity but also expedient.</p>
+    <p><img src="http://www.globalnerdy.com/wordpress/wp-content/uploads/2012/04/geeks-and-repetitive-tasks.jpg" alt="geekChoice"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -100,20 +120,35 @@ $(function() {
     <h2>Tools for Reproducible Research</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Version control (Git)</li>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ol>
+<li>Version control
+
+<ul>
+<li>Git</li>
+</ul></li>
+<li>Dynamic documents
+
+<ul>
 <li>Markdown</li>
 <li>knitr</li>
 <li>pandoc</li>
-</ul>
+</ul></li>
+</ol>
 
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="http://www.siam.org/images/news/2078.jpg" alt="RR"></p>
+
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="segue nobackground dark" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Version Control</h2>
+    <h2>Version Control Systems</h2>
   </hgroup>
   <article data-timings="">
     
@@ -126,21 +161,180 @@ $(function() {
     <h2>Version control System (VCS)</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Version control systems (VCS)</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ol>
+<li>Origins in software development</li>
+<li>Advanced file versioning, and infinite undo</li>
+<li>Does not interfere with current methods (backups etc.)</li>
+<li>Lots of options (Subversion, Mercurial, Git)</li>
 </ol>
 
-<p><img src="http://thril.uws.edu.au/wp-content/uploads/2013/10/git-icon.png" alt="gitIcon"></p>
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" alt="vcs"></p>
 
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Git &amp; GitHub</h2>
+    <h2>File Tracking (Old way)</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>with &quot;track changes&quot; <code>accepted==gone</code></li>
+<li>Data changes (Who? Why? When?)</li>
+<li>VCS maintains a full provenance:
+
+<ul>
+<li>date &amp; time of change </li>
+<li>authorof changes </li>
+<li>details on exact changes</li>
+<li>+ SSH hashes </li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" alt="vcs2"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue nobackground dark" id="slide-7" style="background:;">
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CnumFiles.jpg" alt="files"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CgitFolder.png" alt="gitWrkFlow"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Git managed folder</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li><p><strong>Contains</strong></p>
+
+<ol>
+<li>All project directories</li>
+<li>All files</li>
+</ol></li>
+<li><p><strong>Including</strong></p>
+
+<ul>
+<li>92 versions of manuscript</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CgitFolder.png" alt="gitWrkFlow"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>git workflow</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5Cgit-workflow.png" alt="gitWrkFlow"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <h2>GitHub</h2>
+
+<ul>
+<li><strong>Git</strong> can also operate collaboratively</li>
+<li>Collaboration require an <strong>shared</strong> server</li>
+<li>The most popular platform is <strong>GitHub</strong></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="http://i1-news.softpedia-static.com/images/news2/Twitter-s-Original-Logo-Designer-Only-Made-3-from-It-2.jpg" alt="gitHubIcon"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>GitHub Interface</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CkpurcellGitHub.png" alt="kpGitHub"></p>
+
+<h2></h2>
+
+<h2>Collaboration in Git</h2>
+
+<h3>1. Collaboration is fueled by <strong>Branches</strong></h3>
+
+<h3>2. Branches can be for different authors or different methods</h3>
+
+<p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CgitBranch.png" alt="gitBranch"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue nobackground dark" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>How about a new Assessment</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://www.phdcomics.com/comics/archive/phd031214s.gif" alt="codeReuse"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Starting a new assessment,</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>1. Clone the previous repro</h3>
+
+<h3>2. START!</h3>
+
+<p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5Cgit-workflow.png" alt="gitWrkFlow"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue nobackground dark" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Dynamic Documents</h2>
   </hgroup>
   <article data-timings="">
     
@@ -148,37 +342,46 @@ $(function() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Dynamic Documents</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="http://www.phdcomics.com/comics/archive/phd031214s.gif" alt="codeReuse"></p>
-
-<h2>Dynamic Documents</h2>
-
-<blockquote>
+    <blockquote>
 <p>&quot;Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do.&quot;</p>
 
-<p>-- Donal E. Knuth, Literate Programming, 1984</p>
+<p>-- Donald E. Knuth, Literate Programming, 1984</p>
 </blockquote>
+
+<h2>Essential a document with the code and text in one.</h2>
 
 <h2>Why?</h2>
 
 <ol>
-<li>Increased repeatiblity</li>
+<li>Increased repeatability</li>
 <li>Reduced creation time (image transfer)</li>
 <li>Reduced transposition errors (no errors in tables)</li>
-<li>Reduced re-creation time (no repition when data changes)</li>
+<li>Reduced re-creation time (no repetition when data changes)</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
-    <h2>Sweave Example</h2>
+    <h2>Sweave</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CsweaveDiagram.png" alt="sweaveImg"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Sweave</h2>
   </hgroup>
   <article data-timings="">
     <pre><code>\section{Exploratory Data Analysis}
@@ -205,142 +408,18 @@ petals represent positions with higher sampling.  The sampling intenstiy uniform
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <hgroup>
     <h2>Rmarkdown Example</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="http://www.rstudio.com/images/docs/markdownChunk.png" alt="dynDocEx"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-10" style="background:;">
-  <hgroup>
-    <h2>Markdown</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>John Mc??</li>
-<li>Simplicity over \(\LaTeX\)</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-11" style="background:;">
-  <hgroup>
-    <h2>Slide 2</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>Literate Programming (Donald Knuth)</li>
-<li>Clear provenance</li>
-<li>Repeatibility</li>
-<li>Collaboration</li>
-<li>Markdown</li>
-<li>Version Control</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-12" style="background:;">
-  <hgroup>
-    <h2>Testing the command line</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>testing </li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-13" style="background:;">
-  <hgroup>
-    <h2>Knitr vs Sweave</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>the maturation of literate</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-14" style="background:;">
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-15" style="background:;">
-  <article data-timings="">
-    <p><img src="http://i1.wp.com/ouseful.files.wordpress.com/2012/07/rchitecture1.png" alt="workFlow"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-16" style="background:;">
-  <hgroup>
-    <h2>Sources for more information</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>Lessions for @scarpentry (<a href="http://software-carpentry.org/v4/index.html">http://software-carpentry.org/v4/index.html</a>)</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-17" style="background:;">
-  <hgroup>
-    <h2>Pandoc conversion utility</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="http://johnmacfarlane.net/pandoc/diagram.png" alt="pandoc"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-18" style="background:;">
-  <hgroup>
-    <h2>Pandoc</h2>
-  </hgroup>
-  <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
-  <p><strong>INPUT</strong>  </p>
-
-<ul>
-<li>markdown<br></li>
-<li>HTML<br></li>
-<li>DocBook<br></li>
-<li>LaTex<br></li>
-<li>MediaWiki<br></li>
-</ul>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CrstudioFiles.png" alt="RstudioFiles"></p>
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><strong>OUTPUT</strong>  </p>
-
-<ul>
-<li>Word docx<br></li>
-<li>LaTex<br></li>
-<li>LaTex Beamer<br></li>
-<li>PDF<br></li>
-<li>HTML5<br></li>
-</ul>
+  <p><img src="http://www.rstudio.com/images/docs/markdownChunk.png" alt="dynDocEx"></p>
 
 </div>
   </article>
@@ -348,46 +427,195 @@ petals represent positions with higher sampling.  The sampling intenstiy uniform
 </slide>
 
 <slide class="" id="slide-19" style="background:;">
-  <hgroup>
-    <h2>File Tracking (Old way)</h2>
-  </hgroup>
   <article data-timings="">
-    <p><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" alt="vcs"></p>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <h2>Markdown</h2>
 
+<ul>
+<li>Created by John Gruber<br></li>
+<li>Simplicity over LaTeX<br></li>
+<li>Basic keyboard commands for formatting</li>
+<li>Faster, due to limited mouse use</li>
+<li>Flexible -- Allows use of LaTeX code</li>
+<li>Easily managed with VCS</li>
+<li>Standardized format for conversion</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CmdSyntax.png" alt="sweaveImg"></p>
+
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Knitr</h2>
+  </hgroup>
   <article data-timings="">
-    <ul>
-<li>with &quot;track changes&quot; <code>accepted==gone</code></li>
-<li>VCS maintains a full record with provenance (date, author, changes)
-
-<ul>
-<li>SSH hashes</li>
-</ul></li>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li><code>knitR()</code> is a R package for dynamic report generation<br></li>
+<li>created by Yihui Xie (Iowa State, RStudio)</li>
+<li>works with other languages (<em>Awk</em>, <em>Lisp</em>, etc.)</li>
+<li>highly customizable (show code, hide code, etc)
+<img src="http://www.rstudio.com/images/docs/markdownChunkOptions.png" alt="knitrCustom"></li>
+<li>Generates PDF (via LaTex), HTML</li>
 </ul>
 
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CknitrBook.jpg" alt="knitrBook"></p>
+
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-21" style="background:;">
   <hgroup>
-    <h2>Branches in Git</h2>
+    <h2>How does it work?</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CgitBranch.png" alt="gitBranch"></p>
+    <p><strong>It takes this code:</strong>  </p>
+
+<p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CknitrEx.png" alt="knitrE"></p>
+
+<p>And creates the previous slide:</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Knitr</h2>
+  </hgroup>
   <article data-timings="">
-    <p>source code management</p>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>created by Yihui Xie (Iowa State, RStudio)</li>
+<li><code>knitR()</code> is a R package for dynamic report generation<br></li>
+<li>works with other languages (<em>Awk</em>, <em>Lisp</em>, etc.)</li>
+<li>highly customizable (show code, hide code, etc)</li>
+<li>Generates <strong>PDF</strong> (via LaTex), <strong>HTML</strong></li>
+</ul>
 
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CknitrBook.jpg" alt="knitrBook"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>For the MS Word hold outs!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5CantiMS.jpg" alt="antiMS"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Pandoc conversion utility</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Swiss Army Knife</li>
+<li>Converts between  <strong>43</strong> formats</li>
+<li>Renders Lit. Cited (No need for EndNote)</li>
+<li>can run from within R</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5Cpandoc.jpg" alt="pandocCon"></p>
+
+<table><thead>
+<tr>
+<th>Inputs</th>
+<th>Outputs</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Markdown</td>
+<td><strong>Word .docx</strong></td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>LaTex</td>
+</tr>
+<tr>
+<td>DocBook</td>
+<td>LaTex Beamer</td>
+</tr>
+<tr>
+<td>LaTex</td>
+<td><strong>PDF</strong></td>
+</tr>
+<tr>
+<td>MediaWiki</td>
+<td>HTML 5</td>
+</tr>
+</tbody></table>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Sources for more information</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><a href="http://software-carpentry.org/v4/index.html">Software Carpentry</a><br></li>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/200552086-Using-R-Markdown">RStudio</a></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>This is the method you are looking for!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="C:%5CUsers%5CKevin.Purcell%5CDocuments%5CGitHub%5CGit4NOAA%5Cgit4NOAA%5Cimages%5Coctobiwan2.jpg" alt="obiOcto"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Or maybe not...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://imgs.xkcd.com/comics/automation.png" alt="theory"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -404,7 +632,7 @@ petals represent positions with higher sampling.  The sampling intenstiy uniform
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title=''>
+        data-slide=2 title='The Quant&#39;s Quandry'>
          2
       </a>
     </li>
@@ -416,7 +644,7 @@ petals represent positions with higher sampling.  The sampling intenstiy uniform
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Version Control'>
+        data-slide=4 title='Version Control Systems'>
          4
       </a>
     </li>
@@ -428,104 +656,140 @@ petals represent positions with higher sampling.  The sampling intenstiy uniform
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Git &amp; GitHub'>
+        data-slide=6 title='File Tracking (Old way)'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Slide 2'>
+        data-slide=7 title=''>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Sweave Example'>
+        data-slide=8 title='Git managed folder'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Rmarkdown Example'>
+        data-slide=9 title='git workflow'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Markdown'>
+        data-slide=10 title=''>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Slide 2'>
+        data-slide=11 title='GitHub Interface'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Testing the command line'>
+        data-slide=12 title='How about a new Assessment'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Knitr vs Sweave'>
+        data-slide=13 title='Starting a new assessment,'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title=''>
+        data-slide=14 title='Dynamic Documents'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title=''>
+        data-slide=15 title='Dynamic Documents'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Sources for more information'>
+        data-slide=16 title='Sweave'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Pandoc conversion utility'>
+        data-slide=17 title='Sweave'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Pandoc'>
+        data-slide=18 title='Rmarkdown Example'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='File Tracking (Old way)'>
+        data-slide=19 title=''>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title=''>
+        data-slide=20 title='Knitr'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Branches in Git'>
+        data-slide=21 title='How does it work?'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title=''>
+        data-slide=22 title='Knitr'>
          22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='For the MS Word hold outs!'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Pandoc conversion utility'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Sources for more information'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='This is the method you are looking for!'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Or maybe not...'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title=''>
+         28
       </a>
     </li>
   </ul>
