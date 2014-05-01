@@ -1,6 +1,6 @@
 ---
-title       : Reproducible Research in Fisheries
-subtitle    : Git, Markdown, knitr and Pandoc for scientific workflow
+title       : Software for Reproducible Research
+subtitle    : applications for fishery stock assessment
 author      : K.M. Purcell
 job         : Postdoctoral Associate
 logo        : noaa.jpg
@@ -33,19 +33,17 @@ $(function() {
 
 ## Reproducible Research 
 
-* **Justifications:**
-
+1. **Justifications:**
     * creates an *open* standard
     * prevents *re-creation* -- facilitates *advancement* 
     * fosters *collaboration*
     * Required by a growning number of publications
     
-* **Fisheries is especially fitted for RR approaches because our work is**:
-
+2. **Fisheries is especially fitted for RR approaches because our work is**:
     * inherently open in that it is for the public good 
     * open to criticism & evaluation
     
-* **Stock assessment is also**:
+3. **Stock assessment is also**:
     * Repetitive -- meaning that reproducibility is not only a necessity but also expedient.
     * Collaborative -- meaning a number of partners contribute to any stock assessment
 
@@ -62,14 +60,14 @@ $(function() {
 *** =left
 
 1. Version control
-  * Git
 2. Dynamic documents
-  * Markdown
-  * knitr
-  * pandoc
+   * Markdown
+   * knitR
+   * pandoc
+
 
 *** =right
-![RR](http://www.siam.org/images/news/2078.jpg)
+![RR](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\RR.jpg)
 
 --- .segue .nobackground .dark
 
@@ -80,21 +78,23 @@ $(function() {
 ## Version control System (VCS)
 
 *** =left
-## 
 
 1. Origins in software development
-2. Advanced file versioning, and infinite undo
-3. Does not interfere with current methods (backups etc.)
-4. Lots of options (Subversion, Mercurial, Git)
+2. Manage changes/edits to:
+  * documents
+  * web sites
+  * computer programs
+3. Advanced file versioning, and infinite undo
+4. Does not interfere with current methods (backups etc.)
+5. Lots of options (Subversion, Mercurial, Git)
 
 *** =right
-## 
 
 ![vcs](http://www.phdcomics.com/comics/archive/phd101212s.gif)
 
 --- &twocol
 
-## File Tracking (Old way)
+## Version control System (VCS)
 
 *** =left
 
@@ -110,43 +110,101 @@ $(function() {
 
 ![vcs2](http://www.phdcomics.com/comics/archive/phd101212s.gif)
 
---- &twocol .segue .nobackground .dark
+--- &twocol 
+## Traditional Directory Organization
 
 *** =left
+
+* Lots of copies
+* Good organization requires complex naming scheme (means nothing to others)
+* Computer file dating unreliable ("modified date") 
+* No information on differences b/w files (possibly in a separate notebook)
+
+
+*** =right
 
 ![files](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\numFiles.jpg)
 
-*** =right
-
-![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitFolder.png)
-
 --- &twocol
 
-## Git managed folder
+## Version control managed folder
 
 *** =left
-* **Contains**
-  1. All project directories
-  2. All files
-  
-* **Including**
-  * 92 versions of manuscript
+
+1. Uses traditional directories
+2. Has all your files
+3. And every version you have saved !
+  * this directory has 92 versions of directory
+4. Process is controled by the program
+5. Details are saved in a hidden file in the directory
+
+**Does not interfere with traditional backup/archiving methods**
 
 *** =right
 
-![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitFolder.png)
+![gitFolder](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitFolder.png)
+
+--- &twocol
+## Why git?
+
+*** =left
+* Industry standard SCM/VCS
+  * most common in science
+* Branching & Merging
+* Small & Fast
+* Distributed
+* Versions assurance (checksums)
+* Data staging
+* Free and Open source
+
+*** =right
+![gitIcon](http://2.bp.blogspot.com/-ip6Kiruk784/UypeS9wRz1I/AAAAAAAADA4/2oXVZcqpHnI/s1600/git-logo.png)
 
 ---
 
-## git workflow
+## git Branches & Merging
 
-![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\git-workflow.png)
+![gitWrkFlow](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\gitBranch.png)
+
+---
+
+## Distributed vs Centralized
+### Centralized
+![gitCent](http://git-scm.com/images/about/workflow-a@2x.png)
+
+---
+
+## Distributed vs Centralized
+### Distributed
+![gitDist](http://git-scm.com/images/about/workflow-b@2x.png)
+
+---
+
+## What does this look like?
+
+![gitGUI](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\screenshot.5.png)
+
+---
+
+## When to commit?
+![gitGUI2](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\screenshot.1.png)
+
+---
+
+## Detailed files changes
+![gitGUI2](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\screenshot.4.png)
+
+---
+
+## Each commit has all the details
+![gitGUI2](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\screenshot.3.png)
+
 
 --- &twocol
-
+## GitHub
 *** =left
 
-## GitHub
+
 
 * **Git** can also operate collaboratively
 * Collaboration require an **shared** server
@@ -159,7 +217,7 @@ $(function() {
 
 ---
 
-## GitHub Interface
+## GitHub 
 
 ![kpGitHub](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\kpurcellGitHub.png)
 
@@ -199,13 +257,13 @@ $(function() {
 
 >-- Donald E. Knuth, Literate Programming, 1984
 
-## Essential a document with the code and text in one.
+Documents with code & text in one, in which tables, values, plots are dynamically created as changes to underlying structure and data occur.
 
 ## Why?
 
 1. Increased repeatability
-2. Reduced creation time (image transfer)
-3. Reduced transposition errors (no errors in tables)
+2. Reduced creation time 
+3. Reduced transposition errors 
 4. Reduced re-creation time (no repetition when data changes)
 
 ---
@@ -238,22 +296,16 @@ The spatial distribution for sampling intensity for entire Gulf Shrimp statistic
 petals represent positions with higher sampling.  The sampling intenstiy uniform and plenty dense. 
 ```
 
---- &twocol
+--- 
 
 ## Rmarkdown Example
 
-*** =left
-
-![RstudioFiles](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\rstudioFiles.png)
-
-*** =right
 ![dynDocEx](http://www.rstudio.com/images/docs/markdownChunk.png)
 
 --- &twocol
+## Markdown  
 
 *** =left 
-
-## Markdown  
 
 * Created by John Gruber  
 * Simplicity over LaTeX  
@@ -345,7 +397,7 @@ MediaWiki     | HTML 5
 
 1. [Software Carpentry](http://software-carpentry.org/v4/index.html)  
 2. [RStudio](https://support.rstudio.com/hc/en-us/articles/200552086-Using-R-Markdown)
-
+3. [Try Git (quick 15 minute tutorial)](https://try.github.io/levels/1/challenges/1)
 
 ---
 
@@ -353,11 +405,5 @@ MediaWiki     | HTML 5
 
 ![obiOcto](C:\\Users\\Kevin.Purcell\\Documents\\GitHub\\Git4NOAA\\git4NOAA\\images\\octobiwan2.jpg)
 
----
 
-## Or maybe not...
-
-![theory](http://imgs.xkcd.com/comics/automation.png)
-
----
 
